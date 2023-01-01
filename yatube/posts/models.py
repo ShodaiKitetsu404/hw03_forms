@@ -3,7 +3,6 @@ from django.db import models
 
 
 User = get_user_model()
-string = '<<< Автор: {}, Дата: {:%Y/%m/%d}, Группа: {}, Текст: {:30} >>>'
 
 
 class Group(models.Model):
@@ -50,7 +49,7 @@ class Post(models.Model):
         verbose_name_plural = 'Записи'
 
     def __str__(self):
-        return string.format(
+        return f'{string.format}'(
             self.author.username,
             self.pub_date,
             self.group,
