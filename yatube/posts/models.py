@@ -49,4 +49,9 @@ class Post(models.Model):
         verbose_name_plural = 'Записи'
 
     def __str__(self):
-        return f'{self.author.username}-{self.pub_date}-{self.group}-{self.text}'
+        return f'''
+            {self.author.username}
+            {self.pub_date}
+            {self.group}
+            {self.text}
+            '''
